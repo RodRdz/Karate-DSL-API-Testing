@@ -4,8 +4,8 @@ Feature: Validate
 
   Scenario: Validate User Login [valid Email]
     Given path '/api/login'
-    And request {"email": "eve.holt@reqres.in","password": "cityslicka"}
-    # And request {"email": "errorpeuba","password": "cityslicka"}
+    # And request {"email": "eve.holt@reqres.in","password": "cityslicka"}
+    And request {"email": "errorpeuba","password": "cityslicka"}
     When method POST
     And print response
     Then status 200
